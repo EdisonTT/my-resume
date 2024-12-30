@@ -1,14 +1,22 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
+import { PATH } from './const';
 
 export const routes: Routes = [
-    {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
-    },
-    {
-        path: 'home',
-        component: HomeComponent
-    }
+  {
+    path: '',
+    redirectTo: PATH.HOME,
+    pathMatch: 'full',
+  },
+  {
+    path: PATH.HOME,
+    loadComponent: () =>
+      import('./components/home/home.component').then((c) => c.HomeComponent),
+  },
+  {
+    path: PATH.EXPERIENCE,
+    loadComponent: () =>
+      import('./components/experience/experience.component').then(
+        (c) => c.ExperienceComponent
+      ),
+  },
 ];

@@ -2,12 +2,12 @@
   <header>
     <div class="name-container">
       <div class="circle"></div>
-      <h2>Edison T T</h2>
+      <h2 (click)="navigateToHome()">Edison T T</h2>
     </div>
     <div class="link-container">
-      <p>Resume</p>
-      <p>Projects</p>
-      <p>Contact</p>
+      <p>Education</p>
+      <p (click)="navigateToExperience()">Experience</p>
+      <p>Skills</p>
     </div>
   </header>
   <main>
@@ -15,12 +15,19 @@
   </main>
   <footer>
     <div class="item">
+      <h3>Contact</h3>
+      <p>+91 8075714434</p>
+    </div>
+    <div class="item">
+      <h3>Email</h3>
+      <p>edison.thomas795&#64;gmail.com</p>
+    </div>
+    <div class="item">
       <h3>Follow me</h3>
       <div class="icons">
         <img src="assets/icons/linkedin.svg" alt="linkedin-icon" />
       </div>
     </div>
-    <p>
-      © 2025 By Edison T T.</p>
+    <p>© 2025 By Edison T T.</p>
   </footer>
 </div>

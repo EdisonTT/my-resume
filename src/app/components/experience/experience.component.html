@@ -1,0 +1,135 @@
+<div class="container">
+  <!-- EY -->
+  <div class="company-details">
+    <header (click)="expandHandler('EY')" [class.expand]="expandEY">
+      <h3>Ernst & Young</h3>
+      <p>June 2024 - Present</p>
+      <img
+        src="assets/icons/drop-down.svg"
+        alt="drop-down"
+        [class.expand]="expandEY"
+      />
+    </header>
+    @if(expandEY) {
+    <div class="content">
+      <div class="designation">
+        <h4>Senior Software Engineer</h4>
+        <p>July 2024 - Present</p>
+      </div>
+
+      <ul>
+        <li>
+          Leading the development of Single Page Applications (SPA) using
+          Angular 17, ensuring scalable and maintainable code.
+        </li>
+        <li>
+          Driving the development process from scratch, including component
+          design, and state management.
+        </li>
+        <li>
+          Mentoring and guiding junior developers on Angular best practices and
+          front-end development strategies.
+        </li>
+      </ul>
+    </div>
+    }
+  </div>
+  <!-- TCS -->
+  <div class="company-details">
+    <header (click)="expandHandler('TCS')" [class.expand]="expandTCS">
+      <h3>Tata Consultancy Service Ltd.</h3>
+      <p>August 2021 - June 2024</p>
+      <img
+        src="assets/icons/drop-down.svg"
+        alt="drop-down"
+        [class.expand]="expandTCS"
+      />
+    </header>
+    @if(expandTCS) {
+    <div class="content">
+      <div class="designation">
+        <h4>Systems Engineer</h4>
+        <p>Aug 2023 - June 2024</p>
+      </div>
+      <ul>
+        <li>
+          Integral part of an Agile (Scrum) development team responsible for
+          adding new features and maintaining a Single Page Application (SPA)
+          using Angular, ensuring alignment with client-provided prototypes.
+        </li>
+        <li>
+          Developed and maintained Node.js proxy layers to interact with various
+          microservices, facilitating seamless communication between the
+          front-end and back-end components.
+        </li>
+        <li>
+          Extensive hands-on experience in building REST APIs using Node.js and
+          the Express framework, ensuring optimal performance and scalability.
+        </li>
+        <li>
+          Created comprehensive OpenAPI documentation for APIs and service
+          descriptions, fostering clear communication and understanding among
+          team members and stakeholders.
+        </li>
+        <li>
+          Conducted contract testing using Postman to ensure endpoint
+          requirements are met, validating the reliability and functionality of
+          the developed features.
+        </li>
+        <li>
+          Utilized JIRA for effective story and bug tracking, ensuring
+          transparency and accountability within the Agile development process.
+        </li>
+      </ul>
+      <div class="designation">
+        <h4>Assistant Systems Engineer</h4>
+        <p>Aug 2022 - June 2023</p>
+      </div>
+      <ul>
+        <li>
+          Started working as a MEAN stack developer on an existing project,
+          learning the system and gradually contributing by adding small
+          features and fixing bugs.
+        </li>
+        <li>
+          Gained familiarity with Azure, Postman, MongoDB, Robo3T, and Chrome
+          DevTools while improving technical skills and working on the
+          application.
+        </li>
+        <li>
+          Developed strong teamwork skills, learning to collaborate effectively
+          in a group setting.
+        </li>
+        <li>
+          Improved communication skills and learned how to handle client
+          interactions and expectations.
+        </li>
+        <li>
+          Gained experience in picking up user stories and aligning development
+          efforts with project requirements.
+        </li>
+      </ul>
+      <div class="designation">
+        <h4>Assistant Systems Engineer Trainee</h4>
+        <p>Aug 2021 - June 2022</p>
+      </div>
+      <ul>
+        <li>
+          Gained foundational knowledge in web development technologies like
+          Angular, HTML, CSS, Node.js, JavaScript, and TypeScript.
+        </li>
+        <li>
+          Acquired skills in coding practices, Agile development methodologies,
+          and best practices for building efficient and scalable web
+          applications during the training period.
+        </li>
+        <li>
+          Developed a strong understanding of front-end and back-end
+          technologies, setting the foundation for future roles in full-stack
+          development.
+        </li>
+      </ul>
+    </div>
+    }
+  </div>
+</div>
