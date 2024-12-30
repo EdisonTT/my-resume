@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+//layout
+
+@mixin flex-box($flex-direction: row) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin skip-scroll-bar {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Animation
+@mixin slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1.5s ease forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin expand-up {
+  overflow: hidden;
+  animation: expandUp 1.5s ease-in-out forwards;
+}
+
+@keyframes expandUp {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}

@@ -1,0 +1,33 @@
+<div class="container">
+  <header>
+    <div class="name-container">
+      <div class="circle"></div>
+      <h2 (click)="navigateToHome()">Edison T T</h2>
+    </div>
+    <div class="link-container">
+      <p>Education</p>
+      <p (click)="navigateToExperience()">Experience</p>
+      <p>Skills</p>
+    </div>
+  </header>
+  <main>
+    <router-outlet />
+  </main>
+  <footer>
+    <div class="item">
+      <h3>Contact</h3>
+      <p>+91 8075714434</p>
+    </div>
+    <div class="item">
+      <h3>Email</h3>
+      <p>edison.thomas795&#64;gmail.com</p>
+    </div>
+    <div class="item">
+      <h3>Follow me</h3>
+      <div class="icons">
+        <img src="assets/icons/linkedin.svg" alt="linkedin-icon" />
+      </div>
+    </div>
+    <p>© 2025 By Edison T T.</p>
+  </footer>
+</div>
