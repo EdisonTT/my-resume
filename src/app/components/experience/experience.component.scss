@@ -49,6 +49,12 @@
       display: grid;
       width: 100%;
       grid-template-columns: 1fr 4fr;
+      @media (max-width: styles.$tab-width) {
+        grid-template-columns: 1fr;
+        :first-child {
+          padding-top: 1rem;
+        }
+      }
       padding: 0 1rem;
       .designation {
         display: flex;

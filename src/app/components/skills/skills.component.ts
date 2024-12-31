@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'skills',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit {
   skills: {
     icon: string;
     name: string;
@@ -83,6 +83,14 @@ export class SkillsComponent {
       percentage: '10%',
     },
   ];
+
+  ngOnInit(): void {
+    this.skills.sort((a, b) => {
+      const x = +a.percentage.replace(/%/g, '');
+      const y = +b.percentage.replace(/%/g, '');
+      return y - x;
+    });
+  }
 
   private getIconUrl(iconName: string) {
     return `assets/icons/${iconName}.svg`;
