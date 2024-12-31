@@ -27,4 +27,14 @@ export class AppComponent implements OnInit {
   navigateToSkills() {
     this._router.navigate([PATH.SKILLS]);
   }
+
+  openInNewTab(to: 'linkedin' | 'github') {
+    const links = {
+      linkedin: 'https://www.linkedin.com/in/edison-t-t/',
+      github: 'https://github.com/EdisonTT',
+    };
+    const url = links[to];
+    if (!url) return;
+    window.open(url, '_blank');
+  }
 }

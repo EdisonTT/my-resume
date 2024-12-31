@@ -78,6 +78,8 @@
         @include styles.flex-box;
         justify-content: flex-start;
         width: 100%;
+        gap: 0.5rem;
+        cursor: pointer;
         img {
           height: 2rem;
           width: 2rem;
