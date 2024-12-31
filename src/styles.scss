@@ -2,12 +2,32 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap");
 
+$tab-width: 840px;
+$mobile-width: 400px;
+
 body {
   margin: 0;
   padding: 0;
   background-color: #f0f8ff;
   height: 100vh;
   font-family: "Roboto", sans-serif;
+}
+//text
+
+@mixin general-heading {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 2px;
+  margin: 0;
+}
+@mixin general-text {
+  text-align: left;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 0;
 }
 
 //layout
@@ -30,9 +50,11 @@ body {
 
 // Animation
 @mixin slide-up {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: slideUp 1.5s ease forwards;
+  @media (min-width: $mobile-width) {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1.5s ease forwards;
+  }
 }
 
 @keyframes slideUp {
@@ -47,8 +69,10 @@ body {
 }
 
 @mixin expand-up {
-  overflow: hidden;
-  animation: expandUp 1.5s ease-in-out forwards;
+  @media (min-width: $mobile-width) {
+    overflow: hidden;
+    animation: expandUp 1.5s ease-in-out forwards;
+  }
 }
 
 @keyframes expandUp {

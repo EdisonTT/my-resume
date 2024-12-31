@@ -19,4 +19,22 @@ export class AppComponent implements OnInit {
   navigateToHome() {
     this._router.navigate([PATH.HOME]);
   }
+
+  navigateToEducation() {
+    this._router.navigate([PATH.EDUCATION]);
+  }
+
+  navigateToSkills() {
+    this._router.navigate([PATH.SKILLS]);
+  }
+
+  openInNewTab(to: 'linkedin' | 'github') {
+    const links = {
+      linkedin: 'https://www.linkedin.com/in/edison-t-t/',
+      github: 'https://github.com/EdisonTT',
+    };
+    const url = links[to];
+    if (!url) return;
+    window.open(url, '_blank');
+  }
 }

@@ -5,9 +5,9 @@
       <h2 (click)="navigateToHome()">Edison T T</h2>
     </div>
     <div class="link-container">
-      <p>Education</p>
+      <p (click)="navigateToEducation()">Education</p>
       <p (click)="navigateToExperience()">Experience</p>
-      <p>Skills</p>
+      <p (click)="navigateToSkills()">Skills</p>
     </div>
   </header>
   <main>
@@ -25,9 +25,18 @@
     <div class="item">
       <h3>Follow me</h3>
       <div class="icons">
-        <img src="assets/icons/linkedin.svg" alt="linkedin-icon" />
+        <img
+          (click)="openInNewTab('linkedin')"
+          src="assets/icons/linkedin.svg"
+          alt="linkedin-icon"
+        />
+        <img
+          (click)="openInNewTab('github')"
+          src="assets/icons/github.svg"
+          alt="github-icon"
+        />
       </div>
     </div>
-    <p>© 2025 By Edison T T.</p>
+    <p class="copyright">© 2025 By Edison T T.</p>
   </footer>
 </div>

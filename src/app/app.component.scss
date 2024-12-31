@@ -7,6 +7,13 @@
   height: 100%;
   header {
     @include styles.flex-box;
+    @media (max-width: 550px) {
+      flex-direction: column;
+      .name-container,
+      .link-container {
+        max-height: 40px;
+      }
+    }
     @include styles.expand-up;
     min-height: 70px;
     .name-container,
@@ -50,19 +57,35 @@
   }
   main {
     flex-grow: 1;
+    height: 0;
     @include styles.skip-scroll-bar;
   }
 
   footer {
-    @include styles.flex-box();
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: styles.$tab-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: styles.$mobile-width) {
+      grid-template-columns: 1fr;
+      max-height: 100px;
+      @include styles.skip-scroll-bar;
+    }
     @include styles.expand-up;
+    min-height: 70px;
     border-top: solid 1px black;
     padding: 1rem 0;
-    justify-content: space-around;
     gap: 0.5rem;
+    row-gap: 1rem;
+    .copyright {
+      display: flex;
+      align-items: center;
+    }
     .item {
       @include styles.flex-box(column);
-      justify-content: space-between;
+      gap: 0.5rem;
+      justify-content: center;
       h3 {
         margin: 0;
         padding: 0;
@@ -72,11 +95,15 @@
       }
       p {
         margin: 0;
+        width: 100%;
+        text-align: left;
       }
       .icons {
         @include styles.flex-box;
         justify-content: flex-start;
         width: 100%;
+        gap: 0.5rem;
+        cursor: pointer;
         img {
           height: 2rem;
           width: 2rem;

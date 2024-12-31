@@ -1,0 +1,14 @@
+<div class="parent">
+  <div class="container">
+    @for (skill of skills; track $index) {
+    <div class="skill-item">
+      <img [src]="skill.icon" alt="angular-icon" />
+      <p>{{ skill.name }}</p>
+      <div class="progress-bar">
+        <div class="progress" [style.width]="skill.percentage"></div>
+        <!-- 85% for Node.js -->
+      </div>
+    </div>
+    }
+  </div>
+</div>
