@@ -19,4 +19,23 @@ export const routes: Routes = [
         (c) => c.ExperienceComponent
       ),
   },
+  {
+    path: PATH.EDUCATION,
+    loadComponent: () =>
+      import('./components/education/education.component').then(
+        (c) => c.EducationComponent
+      ),
+  },
+  {
+    path: PATH.SKILLS,
+    loadComponent: () =>
+      import('./components/skills/skills.component').then(
+        (c) => c.SkillsComponent
+      ),
+  },
+  {
+    path: '**',
+    redirectTo: PATH.HOME,
+    pathMatch: 'full',
+  },
 ];

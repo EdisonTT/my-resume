@@ -19,4 +19,12 @@ export class AppComponent implements OnInit {
   navigateToHome() {
     this._router.navigate([PATH.HOME]);
   }
+
+  navigateToEducation() {
+    this._router.navigate([PATH.EDUCATION]);
+  }
+
+  navigateToSkills() {
+    this._router.navigate([PATH.SKILLS]);
+  }
 }
