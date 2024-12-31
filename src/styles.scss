@@ -9,6 +9,23 @@ body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
 }
+//text
+
+@mixin general-heading {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 2px;
+  margin: 0;
+}
+@mixin general-text {
+  text-align: left;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 0;
+}
 
 //layout
 
